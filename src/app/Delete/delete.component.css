@@ -1,0 +1,44 @@
+.table{
+  width: 100%;
+}
+
+.firsttirdcollumn{
+  width: 25%;
+  /*border: solid coral;*/
+}
+
+.centercollumn{
+  width: 50%;
+  /*overflow-y: auto;*/
+}
+
+.nav-list-dashboard{
+  height: 100%;
+}
+
+.list{
+  color: darkviolet;
+  border-bottom: solid rgba(73, 0, 223, 0.1);
+  border-right: solid rgba(38, 0, 151, 0.04);
+  word-spacing: 30px;
+  text-shadow: 2px,3px,darkviolet;
+}
+
+.badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #8a028b;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+
+.cardList:hover{
+  background-color: rgba(163, 0, 255, 0.03);
+}

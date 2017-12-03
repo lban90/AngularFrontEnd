@@ -1,0 +1,40 @@
+<table class="table" cellspacing="1">
+  <tr>
+    <td class="firsttirdcollumn"></td>
+    <td class="centercollumn">
+      <mat-card>
+        <mat-card class="cardList" *ngFor="let item of itemsDashboard" [class.selected]="item === selectedItemDashboard" (click)="onSelect(item);gotoDetailPresentation()">
+          <mat-card-header>
+            <img mat-card-avatar src="https://source.unsplash.com/random/50x50">
+            <mat-card-title><font color="#9400d3"><b><i>{{item.name}}</i></b></font></mat-card-title>
+            <mat-card-subtitle><b>Manufacturer:</b>  <font color="#9400d3"><i>{{item.manufacturer}}</i></font> <b>Item Price:</b>  <font color="#9400d3"><i>{{item.price}}</i></font>  <b>Item Cuantity:</b>  <font color="#9400d3"><i>{{item.cuantity}}</i></font></mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
+      </mat-card>
+    </td>
+    <td class="firsttirdcollumn"></td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+<!--<mat-card>-->
+  <!--<mat-card-content class="card-content"></mat-card-content>-->
+  <!--<mat-card-content  class="card-content-center">-->
+    <!--<mat-nav-list>-->
+     <!--<mat-list-item  *ngFor="let item of itemsDashboard" [class.selected]="item === selectedItemDashboard"(click)="onSelect(item);gotoDetailPresentation()">-->
+       <!--{{item.id}}-->
+       <!--{{item.manufacturer}}-->
+       <!--{{item.name}}-->
+       <!--{{item.description}}-->
+       <!--{{item.cuantity}}-->
+       <!--{{item.price}}-->
+     <!--</mat-list-item>-->
+    <!--</mat-nav-list>-->
+  <!--</mat-card-content>-->
+  <!--<mat-card-content class="card-content"></mat-card-content>-->
+<!--</mat-card>-->

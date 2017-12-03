@@ -1,0 +1,38 @@
+.table1{
+  width: 100%;
+}
+.first-collumn{
+  width: 25%;
+
+}
+.second-collumn{
+  width: 50%;
+}
+.third-collumn{
+  width: 25%;
+
+}
+
+.form-field-full-width{
+  width: 100%;
+}
+.form-field-half-width{
+  width: 50%;
+}
+
+.saveButton{
+  position: relative;
+  right: -72%;
+}
+
+.fromPrice{
+  width: 50%;
+
+}
+
+.formCuantity{
+  width: 50%;
+}
+
+
+

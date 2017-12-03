@@ -1,0 +1,146 @@
+<table class="table1">
+  <tr>
+    <td class="first-collumn"></td>
+    <td class="second-collumn" *ngIf="item">
+      <mat-tab-group>
+
+      <mat-tab label="ITEM DESCRIPTION">
+      <mat-card>
+        <table class="form-field-full-width">
+          <tr>
+            <mat-toolbar color="white">ITEM DESCRIPTION</mat-toolbar>
+          </tr>
+        </table>
+    <table class="form-field-full-width">
+
+      <tr class="line1">
+          <form class="form-field-full-width">
+            <mat-form-field class="form-field-full-width">
+              <input matInput placeholder="Item manufacturer" disabled value={{item.manufacturer}}>
+            </mat-form-field>
+          </form>
+      </tr>
+
+      <tr class="line1">
+        <form class="form-field-full-width">
+          <mat-form-field class="form-field-full-width">
+            <input matInput placeholder="Item name" disabled value={{item.name}}>
+          </mat-form-field>
+        </form>
+      </tr>
+
+      <tr class="line1">
+        <form class="form-field-full-width">
+          <mat-form-field class="form-field-full-width">
+            <input matInput placeholder="Item description" disabled value={{item.description}}>
+          </mat-form-field>
+        </form>
+      </tr>
+      </table>
+
+      <table class="form-field-full-width">
+        <tr>
+          <td>
+            <form class="form-field-full-width">
+              <mat-form-field class="form-field-full-width">
+                <input matInput placeholder="Item price" disabled value={{item.price}}>
+              </mat-form-field>
+            </form>
+          </td>
+          <form class="form-field-full-width">
+            <mat-form-field class="form-field-full-width">
+              <input matInput placeholder="Item cuantity" disabled value={{item.cuantity}}>
+            </mat-form-field>
+          </form>
+          <td>
+
+          </td>
+        </tr>
+      </table>
+      <mat-card-footer>
+      <table class="form-field-full-width">
+        <tr>
+          <mat-toolbar color="white">
+            <button mat-raised-button color="primary" (click)="goBack()">BACK</button>
+          </mat-toolbar>
+        </tr>
+      </table>
+      </mat-card-footer>
+      </mat-card>
+      </mat-tab>
+
+
+
+        <!--UPDATE SIDE-->
+
+
+        <mat-tab  label="UPDATE ITEM">
+          <mat-card>
+            <table class="form-field-full-width">
+              <tr>
+                <mat-toolbar color="white">UPDATE ITEM</mat-toolbar>
+              </tr>
+            </table>
+            <table class="form-field-full-width">
+
+              <tr class="line1">
+                <form class="form-field-full-width">
+                  <mat-form-field class="form-field-full-width">
+                    <input [(ngModel)]="item.manufacturer" name="itemManufacturer" matInput placeholder="Item manufacturer" value="{{item.manufacturer}}">
+                  </mat-form-field>
+                </form>
+              </tr>
+
+              <tr class="line1">
+                <form class="form-field-full-width">
+                  <mat-form-field class="form-field-full-width">
+                    <input [(ngModel)]="item.name" name="itemName" matInput placeholder="Item name" value={{item.name}}>
+                  </mat-form-field>
+                </form>
+              </tr>
+
+              <tr class="line1">
+                <form class="form-field-full-width">
+                  <mat-form-field class="form-field-full-width">
+                    <input [(ngModel)]="item.description" name="itemDescription" matInput placeholder="Item description" value={{item.description}}>
+                  </mat-form-field>
+                </form>
+              </tr>
+            </table>
+
+            <table class="form-field-full-width">
+              <tr>
+                <td>
+                  <form class="form-field-full-width">
+                    <mat-form-field class="form-field-full-width">
+                      <input [(ngModel)]="item.price" name="itemPrice" matInput placeholder="Item price" value={{item.price}}>
+                    </mat-form-field>
+                  </form>
+                </td>
+                <form class="form-field-full-width">
+                  <mat-form-field class="form-field-full-width">
+                    <input [(ngModel)]="item.cuantity" name="itemCuantity" matInput placeholder="Item cuantity" value={{item.cuantity}}>
+                  </mat-form-field>
+                </form>
+                <td>
+
+                </td>
+              </tr>
+            </table>
+            <mat-card-footer>
+              <table class="form-field-full-width">
+                <tr>
+                  <mat-toolbar color="white">
+                    <button mat-raised-button color="primary" (click)="goBack()">BACK</button>
+                    <button mat-raised-button color="primary" class="saveButton" (click)="save()">SAVE</button>
+                  </mat-toolbar>
+                </tr>
+              </table>
+            </mat-card-footer>
+          </mat-card>
+
+        </mat-tab>
+      </mat-tab-group>
+    <td class="third-collumn"></td>
+  </tr>
+</table>

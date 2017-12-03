@@ -1,0 +1,81 @@
+<table class="table1">
+  <tr>
+    <td class="first-collumn"></td>
+    <td class="second-collumn" >
+      <mat-card>
+        <table class="form-field-full-width">
+          <tr>
+            <mat-toolbar color="white">ADD ITEM</mat-toolbar>
+          </tr>
+        </table>
+        <table class="form-field-full-width">
+
+          <tr class="line1">
+            <form class="form-field-full-width">
+              <mat-form-field class="form-field-full-width">
+                <input #itemManufacturer name="itemManufacturer" matInput [formControl]="isRequiredManufacturer" placeholder="Item manufacturer">
+                <mat-error *ngIf="isRequiredManufacturer.hasError('required')"> Manufacturer is mandatory field!</mat-error>
+              </mat-form-field>
+            </form>
+          </tr>
+
+          <tr class="line1">
+            <form class="form-field-full-width">
+              <mat-form-field class="form-field-full-width">
+                <input #itemName name="itemName" matInput placeholder="Item name" [formControl]="isRequiredName">
+                <mat-error *ngIf="isRequiredName.hasError('required')">The name is required</mat-error>
+              </mat-form-field>
+            </form>
+          </tr>
+
+          <tr class="line1">
+            <form class="form-field-full-width">
+              <mat-form-field class="form-field-full-width">
+                <input #itemDescription name="itemDescription" matInput placeholder="Item description">
+              </mat-form-field>
+            </form>
+          </tr>
+        </table>
+
+        <table class="form-field-full-width">
+          <tr>
+            <td>
+              <form class="form-field-full-width">
+                <mat-form-field class="form-field-full-width">
+                  <input #itemPrice name="itemPrice" matInput [formControl]="isNumberPrice" placeholder="Item price" >
+                  <mat-error *ngIf="isNumberPrice.hasError('pattern')">
+                    Please enter a correct price value
+                  </mat-error>
+                  <mat-error *ngIf="isNumberPrice.hasError('required')">The price is required</mat-error>
+                </mat-form-field>
+              </form>
+            </td>
+            <form class="form-field-full-width">
+              <mat-form-field class="form-field-full-width">
+                <input #itemCuantity name="itemCuantity" matInput [formControl]="isNumberCuantity" placeholder="Item cuantity">
+                <mat-error *ngIf="isNumberCuantity.hasError('pattern')">
+                  Please enter a correct quantity value
+                </mat-error>
+                <mat-error *ngIf="isNumberCuantity.hasError('required')">The quantity is required</mat-error>
+              </mat-form-field>
+            </form>
+            <td>
+
+            </td>
+          </tr>
+        </table>
+        <mat-card-footer>
+          <table class="form-field-full-width">
+            <tr>
+              <mat-toolbar color="white">
+                <button mat-raised-button color="primary" (click)="goBack()">BACK</button>
+                <button mat-raised-button color="primary" class="saveButton" (click)="add(itemManufacturer.value,itemName.value,itemDescription.value,itemCuantity.value,itemPrice.value)">ADD</button>
+              </mat-toolbar>
+            </tr>
+          </table>
+        </mat-card-footer>
+      </mat-card>
+    </td>
+    <td class="third-collumn"></td>
+  </tr>
+</table>

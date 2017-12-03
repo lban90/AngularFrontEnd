@@ -1,0 +1,25 @@
+.login{
+  position: relative;
+  right: -245px;
+}
+
+.help{
+  position: relative;
+  right: -250px;
+}
+
+.appComponetTable{
+  width: 100%;
+}
+
+.appComponentFirstThirdCollumn{
+  width: 20%;
+}
+
+.appComponentSecondCollumn{
+  width: 60%;
+}
+
+.toolbar{
+  box-shadow: black;
+}
